@@ -578,12 +578,12 @@
         padding-right: 18px !important;
       }
 
-      body>section:first-of-type {
+      body > section:first-of-type {
         padding-top: 96px !important;
         padding-bottom: 46px !important;
       }
 
-      body>section:first-of-type .max-w-7xl {
+      body > section:first-of-type .max-w-7xl {
         display: flex !important;
         flex-direction: column;
         width: calc(100vw - 36px) !important;
@@ -592,14 +592,14 @@
         overflow: hidden;
       }
 
-      body>section:first-of-type .reveal {
+      body > section:first-of-type .reveal {
         order: 1 !important;
         min-width: 0;
         width: 100%;
         max-width: 100%;
       }
 
-      body>section:first-of-type .reveal-right {
+      body > section:first-of-type .reveal-right {
         order: 2 !important;
         min-width: 0;
         width: 100%;
@@ -622,18 +622,18 @@
         font-size: 2.35rem;
       }
 
-      body>section:first-of-type p {
+      body > section:first-of-type p {
         max-width: 100% !important;
         overflow-wrap: anywhere;
       }
 
-      body>section:first-of-type .flex.flex-wrap {
+      body > section:first-of-type .flex.flex-wrap {
         display: grid !important;
         grid-template-columns: 1fr;
         gap: 12px !important;
       }
 
-      body>section:first-of-type .flex.flex-wrap a {
+      body > section:first-of-type .flex.flex-wrap a {
         width: 100%;
         justify-content: center;
         padding-left: 18px !important;
@@ -662,7 +662,7 @@
         display: grid !important;
       }
 
-      #focus .md\:hidden>div {
+      #focus .md\:hidden > div {
         padding: 22px 0;
         border-top: 1px solid rgba(10, 10, 10, 0.08);
       }
@@ -707,7 +707,7 @@
         margin-top: 2.25rem !important;
       }
 
-      #projects .slider-block>.flex:first-child {
+      #projects .slider-block > .flex:first-child {
         display: none !important;
       }
 
@@ -751,7 +751,7 @@
         height: 168px;
       }
 
-      #projects .project-card>.p-6 {
+      #projects .project-card > .p-6 {
         padding: 18px !important;
       }
 
@@ -781,7 +781,7 @@
         text-align: center;
       }
 
-      .slider-block>.min-\[451px\]\:hidden {
+      .slider-block > .min-\[451px\]\:hidden {
         display: flex !important;
         margin-top: 20px !important;
       }
@@ -846,8 +846,7 @@
     }
 
     .featured-pride-label {
-      color: #8b6f00 !important;
-      /* Золотой цвет как у AI Assistant */
+      color: #8b6f00 !important; /* Золотой цвет как у AI Assistant */
       background: none !important;
       font-size: 18px;
       font-weight: 900;
@@ -2073,10 +2072,9 @@
 
     /* Змейка для мобилок (до 900px) */
     .focus-curve--vertical {
-      display: none;
-      /* Скрыта по умолчанию */
+      display: none; /* Скрыта по умолчанию */
       width: 100%;
-      height: 200px;
+      height: 300px;
       margin: 2rem 0;
     }
 
@@ -2114,10 +2112,8 @@
 
       .focus-curve--vertical {
         display: block !important;
-        order: 2;
-        /* Ставим её между блоком Frontend и Telegram */
+        order: 2; /* Ставим её между блоком Frontend и Telegram */
       }
-
       .focus-curve--vertical path {
         vector-effect: non-scaling-stroke;
         stroke: var(--black);
@@ -2166,14 +2162,10 @@
       <ul class="flex flex-col p-6 gap-4 text-lg font-medium">
         <li><a href="#about" class="block py-1 text-white/90 hover:text-[var(--pink-dark)] transition">Обо мне</a></li>
         <li><a href="#focus" class="block py-1 text-white/90 hover:text-[var(--pink-dark)] transition">Фокус</a></li>
-        <li><a href="#projects" class="block py-1 text-white/90 hover:text-[var(--pink-dark)] transition">Проекты</a>
-        </li>
-        <li><a href="#current" class="block py-1 text-white/90 hover:text-[var(--pink-dark)] transition">В работе</a>
-        </li>
-        <li><a href="#method" class="block py-1 text-white/90 hover:text-[var(--pink-dark)] transition">Почему я</a>
-        </li>
-        <li><a href="#contact" class="block py-1 text-white/90 hover:text-[var(--pink-dark)] transition">Контакты</a>
-        </li>
+        <li><a href="#projects" class="block py-1 text-white/90 hover:text-[var(--pink-dark)] transition">Проекты</a></li>
+        <li><a href="#current" class="block py-1 text-white/90 hover:text-[var(--pink-dark)] transition">В работе</a></li>
+        <li><a href="#method" class="block py-1 text-white/90 hover:text-[var(--pink-dark)] transition">Почему я</a></li>
+        <li><a href="#contact" class="block py-1 text-white/90 hover:text-[var(--pink-dark)] transition">Контакты</a></li>
         <li class="mt-2">
           <a href="#contact"
             class="inline-flex items-center px-5 py-2.5 rounded-full border border-[var(--pink-dark)] text-[var(--pink-dark)] text-sm font-medium">
@@ -2618,8 +2610,7 @@
   <!-- ====================================================== -->
   <!-- FOCUS                                      -->
   <!-- ====================================================== -->
-  <section id="focus"
-    class="focus-section bg-[#F6F4F0] py-20 md:py-28 px-6 border-t border-black/10 relative overflow-hidden">
+  <section id="focus" class="focus-section bg-[#F6F4F0] py-20 md:py-28 px-6 border-t border-black/10 relative overflow-hidden">
     <div class="max-w-7xl mx-auto">
 
       <div class="flex items-baseline justify-between mb-4 reveal">
@@ -2630,8 +2621,7 @@
       </div>
 
       <p class="max-w-2xl mb-10 md:mb-14 text-base md:text-lg opacity-75 reveal">
-        В университете и в жизни я изучаю много всего. Я люблю копаться в новых технологиях и пробовать разное, но если
-        говорить о том, чем я горю прямо сейчас и где лежит мой основной опыт — это две конкретные области:
+        В университете и в жизни я изучаю много всего. Я люблю копаться в новых технологиях и пробовать разное, но если говорить о том, чем я горю прямо сейчас и где лежит мой основной опыт — это две конкретные области:
       </p>
 
       <div id="line-container" class="relative max-[900px]:hidden" style="min-height: clamp(900px, 115vw, 1300px);">
@@ -2643,9 +2633,7 @@
         </svg>
 
         <svg class="focus-curve--vertical" viewBox="0 0 100 300" preserveAspectRatio="none" aria-hidden="true">
-          <path class="snake-path" 
-        d="M 20 10 C 90 10, 90 30, 50 30 C 10 30, 10 50, 50 50 C 90 50, 90 70, 50 70 C 10 70, 10 90, 50 90 L 40 85 M 50 90 L 60 85" 
-        fill="none" stroke="var(--black)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M 50 5 C 130 25, 130 50, 50 75 C -30 100, -30 125, 50 150 C 130 175, 130 200, 50 225 C -30 250, -30 275, 45 295 L 30 288 M 45 295 L 52 278" />
         </svg>
 
         <div class="absolute reveal-left z-10" style="left: 2%; top: 3%; max-width: 42%;">
@@ -2653,33 +2641,20 @@
           <div class="mt-4 max-w-md">
             <p class="text-xs uppercase tracking-widest font-semibold opacity-60 mb-2">01 — Разработка</p>
             <p class="text-sm md:text-base leading-relaxed opacity-85">
-              Собираю интерфейсы, которыми приятно пользоваться. Слежу за тем, чтобы верстка не разваливалась на
-              телефонах, кнопки работали предсказуемо, а код был чистым и аккуратным. Люблю браться за разные проекты,
-              даже если на начальном этапе не знаю, как это осуществить :)
+              Собираю интерфейсы, которыми приятно пользоваться. Слежу за тем, чтобы верстка не разваливалась на телефонах, кнопки работали предсказуемо, а код был чистым и аккуратным. Люблю браться за разные проекты, даже если на начальном этапе не знаю, как это осуществить :)
             </p>
             <ul class="focus-stack mt-4">
-              <li>HTML5</li>
-              <li>CSS3 / SCSS</li>
-              <li>JavaScript (ES6+)</li>
-              <li>React</li>
-              <li>Адаптивная вёрстка</li>
-              <li>Tailwind</li>
-              <li>Pug</li>
-              <li>WordPress</li>
-              <li>Git / GitHub</li>
-              <li>Figma → код</li>
+              <li>HTML5</li><li>CSS3 / SCSS</li><li>JavaScript (ES6+)</li><li>React</li><li>Адаптивная вёрстка</li><li>Tailwind</li><li>Pug</li><li>WordPress</li><li>Git / GitHub</li><li>Figma → код</li>
             </ul>
           </div>
         </div>
 
-        <div class="absolute reveal-up focus-photo"
-          style="left: 4%; bottom: 8%; width: 38%; aspect-ratio: 4/3; transform: rotate(-2deg);">
-          <img src="images/Telegram-bots-photo.png" alt="Frontend разработка" />
+        <div class="absolute reveal-up focus-photo" style="left: 4%; bottom: 8%; width: 38%; aspect-ratio: 4/3; transform: rotate(-2deg);">
+          <img src="images/Frontend-photo.png" alt="Frontend разработка" />
         </div>
 
-        <div class="absolute reveal-right focus-photo"
-          style="right: 3%; top: 6%; width: 39%; aspect-ratio: 4/3; transform: rotate(3deg);">
-          <img src="images/Frontend-photo.png" alt="Telegram-боты" />
+        <div class="absolute reveal-right focus-photo" style="right: 3%; top: 6%; width: 39%; aspect-ratio: 4/3; transform: rotate(3deg);">
+          <img src="images/Telegram-bots-photo.png" alt="Telegram-боты" />
         </div>
 
         <div class="absolute reveal-right z-10" style="right: 2%; bottom: 12%; max-width: 46%; text-align: right;">
@@ -2687,21 +2662,10 @@
           <div class="mt-4 max-w-md ml-auto">
             <p class="text-xs uppercase tracking-widest font-semibold opacity-60 mb-2">02 — Автоматизация</p>
             <p class="text-sm md:text-base leading-relaxed opacity-85">
-              Превращаю скучную рутину в удобные меню внутри мессенджера. Пишу ботов, которые берут на себя запись
-              клиентов, учёт заявок или просто делают жизнь проще. Стараюсь продумывать сценарии так, чтобы бот не падал
-              от случайной опечатки пользователя.
+              Превращаю скучную рутину в удобные меню внутри мессенджера. Пишу ботов, которые берут на себя запись клиентов, учёт заявок или просто делают жизнь проще. Стараюсь продумывать сценарии так, чтобы бот не падал от случайной опечатки пользователя.
             </p>
             <ul class="focus-stack mt-4" style="justify-content: flex-end;">
-              <li>Python</li>
-              <li>aiogram</li>
-              <li>python-telegram-bot</li>
-              <li>FastAPI</li>
-              <li>SQLAlchemy</li>
-              <li>SQLite / PostgreSQL</li>
-              <li>Redis</li>
-              <li>Webhooks</li>
-              <li>Docker</li>
-              <li>RBAC</li>
+              <li>Python</li><li>aiogram</li><li>python-telegram-bot</li><li>FastAPI</li><li>SQLAlchemy</li><li>SQLite / PostgreSQL</li><li>Redis</li><li>Webhooks</li><li>Docker</li><li>RBAC</li>
             </ul>
           </div>
         </div>
@@ -2716,17 +2680,9 @@
           <div class="reveal-right">
             <h3 class="serif-display text-4xl md:text-5xl mb-2">Frontend</h3>
             <p class="text-xs uppercase tracking-widest font-semibold opacity-60 mb-2">01 — Разработка</p>
-            <p class="opacity-85 text-sm leading-relaxed mb-4">Собираю интерфейсы, которыми приятно пользоваться. Слежу
-              за тем, чтобы верстка не разваливалась на телефонах, кнопки работали предсказуемо, а код был чистым и
-              аккуратным.</p>
+            <p class="opacity-85 text-sm leading-relaxed mb-4">Собираю интерфейсы, которыми приятно пользоваться. Слежу за тем, чтобы верстка не разваливалась на телефонах, кнопки работали предсказуемо, а код был чистым и аккуратным.</p>
             <ul class="focus-stack">
-              <li>HTML5</li>
-              <li>CSS3 / SCSS</li>
-              <li>JavaScript (ES6+)</li>
-              <li>React</li>
-              <li>Tailwind</li>
-              <li>Pug</li>
-              <li>Git</li>
+              <li>HTML5</li><li>CSS3 / SCSS</li><li>JavaScript (ES6+)</li><li>React</li><li>Tailwind</li><li>Pug</li><li>Git</li>
             </ul>
           </div>
           <div class="focus-photo aspect-4/3 transform rotate-2 max-[640px]:hidden reveal-left shadow-xl">
@@ -2757,22 +2713,14 @@
           <div class="reveal-left text-right max-[640px]:text-left">
             <h3 class="serif-display text-4xl md:text-5xl mb-2">Telegram<br>боты</h3>
             <p class="text-xs uppercase tracking-widest font-semibold opacity-60 mb-2">02 — Автоматизация</p>
-            <p class="opacity-85 text-sm leading-relaxed mb-4">Пишу ботов, которые берут на себя запись клиентов, учёт
-              заявок и бизнес-процессы. Главное — ясный сценарий и защита от сбоев.</p>
+            <p class="opacity-85 text-sm leading-relaxed mb-4">Пишу ботов, которые берут на себя запись клиентов, учёт заявок и бизнес-процессы. Главное — ясный сценарий и защита от сбоев.</p>
             <ul class="focus-stack justify-end max-[640px]:justify-start">
-              <li>Python</li>
-              <li>aiogram</li>
-              <li>FastAPI</li>
-              <li>SQLAlchemy</li>
-              <li>PostgreSQL</li>
-              <li>Redis</li>
-              <li>Docker</li>
+              <li>Python</li><li>aiogram</li><li>FastAPI</li><li>SQLAlchemy</li><li>PostgreSQL</li><li>Redis</li><li>Docker</li>
             </ul>
           </div>
         </div>
 
-        <a href="#projects"
-          class="focus-cta self-end max-[640px]:self-start relative z-10 mt-10 max-[640px]:mt-6 reveal-up">
+        <a href="#projects" class="focus-cta self-end max-[640px]:self-start relative z-10 mt-10 max-[640px]:mt-6 reveal-up">
           Посмотреть проекты <i class="fas fa-arrow-right text-xs"></i>
         </a>
       </div>
@@ -2794,8 +2742,7 @@
           <h2 class="section-title">Мои<br />проекты.</h2>
           <p class="mt-4 text-base md:text-lg opacity-80 max-w-xl">
             Мой проектный опыт строится вокруг Telegram-ботов, сайтов, приложений и программ. Я люблю делать вещи,
-            которые решают реальные проблемы - жизни, бизнеса — автоматизируют рутину, экономят время и просто удобно
-            работают.
+            которые решают реальные проблемы - жизни, бизнеса — автоматизируют рутину, экономят время и просто удобно работают.
           </p>
           <div
             class="mt-6 inline-flex items-center gap-3 bg-[var(--pink-soft)] px-4 py-2.5 rounded-xl border border-[var(--pink-dark)]/50">
@@ -2810,24 +2757,21 @@
       </div>
 
       <div class="slider-block" data-autoscroll="true">
-
+        
         <div class="flex flex-col md:flex-row md:items-end justify-end gap-6 mb-6">
           <div class="hidden min-[451px]:flex gap-3 pb-2">
-            <button
-              class="slider-prev w-12 h-12 rounded-full border border-black flex items-center justify-center hover:bg-black hover:text-white transition">
+            <button class="slider-prev w-12 h-12 rounded-full border border-black flex items-center justify-center hover:bg-black hover:text-white transition">
               <i class="fas fa-arrow-left"></i>
             </button>
-            <button
-              class="slider-next w-12 h-12 rounded-full border border-black flex items-center justify-center hover:bg-black hover:text-white transition">
+            <button class="slider-next w-12 h-12 rounded-full border border-black flex items-center justify-center hover:bg-black hover:text-white transition">
               <i class="fas fa-arrow-right"></i>
             </button>
           </div>
         </div>
 
         <div class="slider-container has-featured">
-
-          <article
-            class="project-card project-card--featured slider-static shrink-0 w-[85vw] sm:w-[360px] md:w-[420px]">
+          
+          <article class="project-card project-card--featured slider-static shrink-0 w-[85vw] sm:w-[360px] md:w-[420px]">
             <a href="ССЫЛКА_НА_GITHUB" target="_blank"
               class="absolute inset-0 bg-[var(--pink)]/90 backdrop-blur-[2px] z-20 opacity-0 hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center text-black cursor-pointer rounded-xl">
               <span class="font-black text-2xl mb-3">Посмотреть код</span>
@@ -2844,93 +2788,75 @@
               <span class="text-xs uppercase tracking-widest opacity-60">Python · AI · Automation</span>
               <h4 class="text-xl font-bold mt-2 mb-2">Персональный ИИ-ассистент для бодрого утра</h4>
               <p class="text-sm opacity-75 leading-relaxed">
-                Свой «Джарвис»: бэкенд-сервис на Python в связке с экосистемой Apple. Выключаю режим «Сон» — iPhone
-                дёргает сервер, тот собирает погоду, мои планы и новости, отдаёт нейросети, и телефон сам зачитывает мне
-                готовый дайджест дня, пока я просыпаюсь.
+                Свой «Джарвис»: бэкенд-сервис на Python в связке с экосистемой Apple. Выключаю режим «Сон» — iPhone дёргает сервер, тот собирает погоду, мои планы и новости, отдаёт нейросети, и телефон сам зачитывает мне готовый дайджест дня, пока я просыпаюсь.
               </p>
             </div>
           </article>
 
           <div class="slider-track slider-track--with-static flex gap-6 w-max">
-
-            <article
-              class="project-card group relative shrink-0 w-[85vw] sm:w-[360px] md:w-[420px] bg-white border border-black/5">
+            
+            <article class="project-card group relative shrink-0 w-[85vw] sm:w-[360px] md:w-[420px] bg-white border border-black/5">
               <a href="ССЫЛКА_НА_ЭТОТ_GITHUB" target="_blank"
                 class="absolute inset-0 bg-[var(--pink)]/90 backdrop-blur-[2px] z-20 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center text-black cursor-pointer">
                 <span class="font-black text-2xl mb-3">Посмотреть код</span>
                 <i class="fab fa-github text-4xl"></i>
               </a>
-              <div class="card-header"><img src="https://placehold.co/800x450/000/ffd1dc?text=Portfolio+Site"
-                  alt="Сайт визитка" /></div>
+              <div class="card-header"><img src="https://placehold.co/800x450/000/ffd1dc?text=Portfolio+Site" alt="Сайт визитка" /></div>
               <div class="p-6">
                 <span class="text-xs uppercase tracking-widest opacity-60">HTML · Tailwind · JS · SVG</span>
                 <h4 class="text-xl font-bold mt-2 mb-2">Сайт-резюме / Визитка</h4>
-                <p class="text-sm opacity-75 leading-relaxed">Тот самый проект, который вы сейчас видите. Спроектировала
-                  и написала с нуля: от кастомных слайдеров до живой анимации SVG-линий.</p>
+                <p class="text-sm opacity-75 leading-relaxed">Тот самый проект, который вы сейчас видите. Спроектировала и написала с нуля: от кастомных слайдеров до живой анимации SVG-линий.</p>
               </div>
             </article>
 
-            <article
-              class="project-card group relative shrink-0 w-[85vw] sm:w-[360px] md:w-[420px] bg-white border border-black/5">
+            <article class="project-card group relative shrink-0 w-[85vw] sm:w-[360px] md:w-[420px] bg-white border border-black/5">
               <a href="ССЫЛКА_НА_GITHUB" target="_blank"
                 class="absolute inset-0 bg-[var(--pink)]/90 backdrop-blur-[2px] z-20 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center text-black cursor-pointer">
                 <span class="font-black text-2xl mb-3">Посмотреть код</span>
                 <i class="fab fa-github text-4xl"></i>
               </a>
-              <div class="card-header"><img src="https://placehold.co/800x450/FFB6C1/0A0A0A?text=Web+Quest"
-                  alt="Web Quest" /></div>
+              <div class="card-header"><img src="https://placehold.co/800x450/FFB6C1/0A0A0A?text=Web+Quest" alt="Web Quest" /></div>
               <div class="p-6">
                 <span class="text-xs uppercase tracking-widest opacity-60">HTML / CSS · JavaScript · Python</span>
                 <h4 class="text-xl font-bold mt-2 mb-2">Web-разработка & Квесты</h4>
-                <p class="text-sm opacity-75 leading-relaxed">Интерактивный сайт-квест, работающий в связке с Telegram.
-                  Игроки проходят задания, а бот фиксирует прогресс.</p>
+                <p class="text-sm opacity-75 leading-relaxed">Интерактивный сайт-квест, работающий в связке с Telegram. Игроки проходят задания, а бот фиксирует прогресс.</p>
               </div>
             </article>
 
-            <article
-              class="project-card group relative shrink-0 w-[85vw] sm:w-[360px] md:w-[420px] bg-white border border-black/5">
+            <article class="project-card group relative shrink-0 w-[85vw] sm:w-[360px] md:w-[420px] bg-white border border-black/5">
               <a href="ССЫЛКА_НА_GITHUB" target="_blank"
                 class="absolute inset-0 bg-[var(--pink)]/90 backdrop-blur-[2px] z-20 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center text-black cursor-pointer">
                 <span class="font-black text-2xl mb-3">Посмотреть код</span>
                 <i class="fab fa-github text-4xl"></i>
               </a>
-              <div class="card-header"><img src="https://placehold.co/800x450/E0F0FF/0A0A0A?text=Water+Delivery+Bot"
-                  alt="Water Delivery" /></div>
+              <div class="card-header"><img src="https://placehold.co/800x450/E0F0FF/0A0A0A?text=Water+Delivery+Bot" alt="Water Delivery" /></div>
               <div class="p-6">
                 <span class="text-xs uppercase tracking-widest opacity-60">Python · Telegram API · REST</span>
                 <h4 class="text-xl font-bold mt-2 mb-2">Бот-доставка воды</h4>
-                <p class="text-sm opacity-75 leading-relaxed">Максимально удобный бот для заказа в один клик. Собрала
-                  каталог, корзину и фичу «повторить прошлый заказ».</p>
+                <p class="text-sm opacity-75 leading-relaxed">Максимально удобный бот для заказа в один клик. Собрала каталог, корзину и фичу «повторить прошлый заказ».</p>
               </div>
             </article>
 
-            <article
-              class="project-card group relative shrink-0 w-[85vw] sm:w-[360px] md:w-[420px] bg-white border border-black/5">
+            <article class="project-card group relative shrink-0 w-[85vw] sm:w-[360px] md:w-[420px] bg-white border border-black/5">
               <a href="ССЫЛКА_НА_GITHUB" target="_blank"
                 class="absolute inset-0 bg-[var(--pink)]/90 backdrop-blur-[2px] z-20 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center text-black cursor-pointer">
                 <span class="font-black text-2xl mb-3">Посмотреть код</span>
                 <i class="fab fa-github text-4xl"></i>
               </a>
-              <div class="card-header"><img src="https://placehold.co/800x450/0A0A0A/FFD1DC?text=ERP+Bot"
-                  alt="ERP Bot" /></div>
+              <div class="card-header"><img src="https://placehold.co/800x450/0A0A0A/FFD1DC?text=ERP+Bot" alt="ERP Bot" /></div>
               <div class="p-6">
                 <span class="text-xs uppercase tracking-widest opacity-60">Python · SQL / DB · RBAC</span>
                 <h4 class="text-xl font-bold mt-2 mb-2">ERP-бот для бизнеса</h4>
-                <p class="text-sm opacity-75 leading-relaxed">Внутренняя система управления. Разграничила роли
-                  (менеджер, склад, логист) для контроля заявок и отчетности.</p>
+                <p class="text-sm opacity-75 leading-relaxed">Внутренняя система управления. Разграничила роли (менеджер, склад, логист) для контроля заявок и отчетности.</p>
               </div>
             </article>
 
           </div>
         </div>
-
+        
         <div class="flex min-[451px]:hidden justify-center gap-6 mt-8">
-          <button
-            class="slider-prev w-14 h-14 rounded-full border border-black flex items-center justify-center bg-white active:bg-black active:text-white transition-colors shadow-sm"><i
-              class="fas fa-arrow-left"></i></button>
-          <button
-            class="slider-next w-14 h-14 rounded-full border border-black flex items-center justify-center bg-white active:bg-black active:text-white transition-colors shadow-sm"><i
-              class="fas fa-arrow-right"></i></button>
+          <button class="slider-prev w-14 h-14 rounded-full border border-black flex items-center justify-center bg-white active:bg-black active:text-white transition-colors shadow-sm"><i class="fas fa-arrow-left"></i></button>
+          <button class="slider-next w-14 h-14 rounded-full border border-black flex items-center justify-center bg-white active:bg-black active:text-white transition-colors shadow-sm"><i class="fas fa-arrow-right"></i></button>
         </div>
       </div>
 
@@ -2968,8 +2894,7 @@
       <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
         <h2 class="section-title reveal">Над чем работаю<br />прямо сейчас.</h2>
         <p class="text-base md:text-lg max-w-sm reveal opacity-60">
-          Не люблю стоять на месте. Прямо сейчас в фокусе — углубление в базу и пара классных проектов, которые хочу
-          довести до ума.
+          Не люблю стоять на месте. Прямо сейчас в фокусе — углубление в базу и пара классных проектов, которые хочу довести до ума.
         </p>
       </div>
 
@@ -3215,8 +3140,7 @@
           <div class="why-item why-item--bl">
             <div class="why-emoji">🛡️</div>
             <h3 class="why-label">Ответственность</h3>
-            <p class="why-desc">Довожу до результата, если что-то идёт не так — прихожу с вопросами и вариантами решений
-            </p>
+            <p class="why-desc">Довожу до результата, если что-то идёт не так — прихожу с вопросами и вариантами решений</p>
           </div>
           <div class="why-item why-item--bc">
             <div class="why-emoji">🤝</div>
@@ -3232,8 +3156,7 @@
       </div>
 
       <p class="text-base md:text-lg opacity-70 max-w-2xl text-center mx-auto mt-24 md:mt-32 reveal">
-        Мне нравится делать продукты, за которые не стыдно. Я искренне вовлекаюсь в процесс, ценю честную обратную связь
-        и хочу расти в команде, где важен результат, а не просто закрытые таски.
+        Мне нравится делать продукты, за которые не стыдно. Я искренне вовлекаюсь в процесс, ценю честную обратную связь и хочу расти в команде, где важен результат, а не просто закрытые таски.
       </p>
     </div>
   </section>
@@ -3348,89 +3271,89 @@
     // ── Focus section: Рисование SVG кривых по скроллу ──────────────
     const deskContainer = document.getElementById("line-container");
     const deskCurve = document.querySelector(".focus-curve path");
-
+    
     const mobContainer = document.querySelector(".focus-story-connector");
     const mobCurve = document.querySelector(".focus-story-source");
     const mobDrawCurve = document.querySelector(".focus-story-line");
 
     // 1. Анимация для Десктопа (S-образная линия)
     if (deskContainer && deskCurve) {
-      let len = deskCurve.getTotalLength();
-      deskCurve.style.strokeDasharray = len;
-      deskCurve.style.strokeDashoffset = len;
-
-      let ticking = false;
-      window.addEventListener("scroll", () => {
-        if (!ticking) {
-          window.requestAnimationFrame(() => {
-            const rect = deskContainer.getBoundingClientRect();
-            const startScroll = window.innerHeight * 0.6;
-            let progress = (startScroll - rect.top) / (rect.height * 0.65);
-            progress = Math.max(0, Math.min(1, progress));
-
-            deskCurve.style.strokeDashoffset = len - (progress * len);
-            ticking = false;
-          });
-          ticking = true;
-        }
-      });
+       let len = deskCurve.getTotalLength();
+       deskCurve.style.strokeDasharray = len;
+       deskCurve.style.strokeDashoffset = len;
+       
+       let ticking = false;
+       window.addEventListener("scroll", () => {
+         if (!ticking) {
+           window.requestAnimationFrame(() => {
+             const rect = deskContainer.getBoundingClientRect();
+             const startScroll = window.innerHeight * 0.6;
+             let progress = (startScroll - rect.top) / (rect.height * 0.65);
+             progress = Math.max(0, Math.min(1, progress));
+             
+             deskCurve.style.strokeDashoffset = len - (progress * len);
+             ticking = false;
+           });
+           ticking = true;
+         }
+       });
     }
 
     // 2. Анимация для Планшетов/Мобилок (Широкая Змейка)
     if (mobContainer && mobCurve && mobDrawCurve) {
-      let len = mobCurve.getTotalLength() || 1;
+       let len = mobCurve.getTotalLength() || 1;
 
-      const syncMobileCurveLength = () => {
-        len = mobCurve.getTotalLength() || 1;
-      };
+       const syncMobileCurveLength = () => {
+         len = mobCurve.getTotalLength() || 1;
+       };
 
-      const getMobileCurveD = (progress) => {
-        if (progress <= 0) return "";
+       const getMobileCurveD = (progress) => {
+         if (progress <= 0) return "";
 
-        const visibleLength = len * progress;
-        const segments = Math.max(2, Math.ceil(180 * progress));
-        const points = [];
+         const visibleLength = len * progress;
+         const segments = Math.max(2, Math.ceil(180 * progress));
+         const points = [];
 
-        for (let i = 0; i <= segments; i++) {
-          const point = mobCurve.getPointAtLength((visibleLength * i) / segments);
-          points.push(`${point.x.toFixed(2)} ${point.y.toFixed(2)}`);
-        }
+         for (let i = 0; i <= segments; i++) {
+           const point = mobCurve.getPointAtLength((visibleLength * i) / segments);
+           points.push(`${point.x.toFixed(2)} ${point.y.toFixed(2)}`);
+         }
 
-        let d = `M ${points.join(" L ")}`;
-        if (progress >= 0.985) {
-          d += " M 54 502 L 39 493 M 54 502 L 49 484";
-        }
+         let d = `M ${points.join(" L ")}`;
+         if (progress >= 0.985) {
+           d += " M 54 502 L 39 493 M 54 502 L 49 484";
+         }
 
-        return d;
-      };
+         return d;
+       };
+       
+       let ticking = false;
+       const drawMobileFocusCurve = () => {
+         const rect = mobContainer.getBoundingClientRect();
+         const startScroll = window.innerHeight * 0.88;
+         let progress = (startScroll - rect.top) / (rect.height * 0.55);
+         progress = Math.max(0, Math.min(1, progress));
 
-      let ticking = false;
-      const drawMobileFocusCurve = () => {
-        const rect = mobContainer.getBoundingClientRect();
-        const startScroll = window.innerHeight * 0.9;
-        let progress = (startScroll - rect.top) / (rect.height * 1.2);
-        progress = Math.max(0, Math.min(1, progress));
+         mobDrawCurve.setAttribute("d", getMobileCurveD(progress));
+       };
 
-        mobDrawCurve.setAttribute("d", getMobileCurveD(progress));
-      };
+       const requestMobileFocusDraw = () => {
+         if (!ticking) {
+           window.requestAnimationFrame(() => {
+             drawMobileFocusCurve();
+             ticking = false;
+           });
+           ticking = true;
+         }
+       };
 
-      const requestMobileFocusDraw = () => {
-        if (!ticking) {
-          window.requestAnimationFrame(() => {
-            drawMobileFocusCurve();
-            ticking = false;
-          });
-          ticking = true;
-        }
-      };
-
-      syncMobileCurveLength();
-      drawMobileFocusCurve();
-      window.addEventListener("scroll", requestMobileFocusDraw);
-      window.addEventListener("resize", () => {
-        syncMobileCurveLength();
-        requestMobileFocusDraw();
-      });
+       syncMobileCurveLength();
+       drawMobileFocusCurve();
+       window.addEventListener("scroll", requestMobileFocusDraw);
+       window.addEventListener("resize", () => {
+         syncMobileCurveLength();
+         requestMobileFocusDraw();
+       });
     }
 
     // ── WIP timeline (desktop, горизонтальный): track + ноды + бары ──
