@@ -637,9 +637,15 @@
       mask-image: linear-gradient(to right, #000 0, #000 calc(100% - 90px), rgba(0, 0, 0, 0.35) calc(100% - 30px), rgba(0, 0, 0, 0) 100%);
     }
 
-    html,
+    html {
+      overflow-x: hidden;
+    }
+
     body {
       overflow-x: hidden;
+      width: 100%;
+      position: relative;
+      -webkit-overflow-scrolling: touch; 
     }
 
     /* Защита от горизонтального скролла */
