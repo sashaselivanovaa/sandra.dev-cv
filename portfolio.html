@@ -23,6 +23,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
   <style>
+    /* ==============================================
+   BASE STYLES
+   ============================================== */
+
     :root {
       --pink: #ffd1dc;
       --pink-soft: #ffe0e9;
@@ -155,15 +159,6 @@
     }
 
     /* Анимация бесконечной прокрутки */
-    @keyframes marquee {
-      from {
-        transform: translateX(0);
-      }
-
-      to {
-        transform: translateX(-100%);
-      }
-    }
 
     /* При наведении строка будет плавно останавливаться (по желанию) */
     .marquee-wrapper:hover .marquee-content {
@@ -555,260 +550,9 @@
       padding-left: calc(var(--static-w) + 24px) !important;
     }
 
-    @media (min-width: 640px) {
-      #projects .slider-container.has-featured {
-        --static-w: 360px;
-      }
-
-      .slider-track--with-static {
-        --static-w: 360px;
-      }
-    }
-
     /* ===========================================
        POLISHED MOBILE LAYOUT
        =========================================== */
-    @media (max-width: 767px) {
-      body {
-        background: #fff;
-      }
-
-      section {
-        padding-left: 18px !important;
-        padding-right: 18px !important;
-      }
-
-      body>section:first-of-type {
-        padding-top: 96px !important;
-        padding-bottom: 46px !important;
-      }
-
-      body>section:first-of-type .max-w-7xl {
-        display: flex !important;
-        flex-direction: column;
-        width: calc(100vw - 36px) !important;
-        max-width: calc(100vw - 36px) !important;
-        gap: 28px !important;
-        overflow: hidden;
-      }
-
-      body>section:first-of-type .reveal {
-        order: 1 !important;
-        min-width: 0;
-        width: 100%;
-        max-width: 100%;
-      }
-
-      body>section:first-of-type .reveal-right {
-        order: 2 !important;
-        min-width: 0;
-        width: 100%;
-        justify-content: flex-start !important;
-      }
-
-      .hero-title,
-      .section-title,
-      .focus-title {
-        letter-spacing: 0;
-      }
-
-      .hero-title {
-        font-size: clamp(2.35rem, 10.8vw, 3rem) !important;
-        margin-bottom: 18px !important;
-        overflow-wrap: anywhere;
-      }
-
-      .hero-title span {
-        font-size: 2.35rem;
-      }
-
-      body>section:first-of-type p {
-        max-width: 100% !important;
-        overflow-wrap: anywhere;
-      }
-
-      body>section:first-of-type .flex.flex-wrap {
-        display: grid !important;
-        grid-template-columns: 1fr;
-        gap: 12px !important;
-      }
-
-      body>section:first-of-type .flex.flex-wrap a {
-        width: 100%;
-        justify-content: center;
-        padding-left: 18px !important;
-        padding-right: 18px !important;
-        white-space: nowrap;
-      }
-
-      .hero-photo-wrap {
-        width: 340px !important;
-        max-width: 100% !important;
-        border-width: 4px !important;
-      }
-
-      .hero-photo-wrap .absolute.top-4 {
-        left: 12px !important;
-        top: 12px !important;
-        padding: 8px 12px !important;
-        font-size: 0.75rem !important;
-      }
-
-      #line-container {
-        display: none !important;
-      }
-
-      #focus .md\:hidden {
-        display: grid !important;
-      }
-
-      #focus .md\:hidden>div {
-        padding: 22px 0;
-        border-top: 1px solid rgba(10, 10, 10, 0.08);
-      }
-
-      #focus .md\:hidden h3 {
-        font-size: clamp(2.8rem, 14vw, 4.5rem) !important;
-        line-height: 0.92;
-      }
-
-      #focus .md\:hidden p.text-base {
-        font-size: 0.95rem;
-        line-height: 1.65;
-      }
-
-      .focus-photo {
-        border-radius: 10px;
-        box-shadow: 0 14px 36px rgba(0, 0, 0, 0.13);
-      }
-
-      .focus-stack {
-        gap: 0.35rem;
-      }
-
-      .focus-stack li {
-        font-size: 0.68rem;
-        padding: 0.25rem 0.56rem;
-      }
-
-      #projects {
-        padding-top: 64px !important;
-      }
-
-      #projects .section-title {
-        font-size: clamp(2.25rem, 15vw, 4rem);
-      }
-
-      #projects .mt-6.inline-flex {
-        display: none !important;
-      }
-
-      #projects .slider-block {
-        margin-top: 2.25rem !important;
-      }
-
-      #projects .slider-block>.flex:first-child {
-        display: none !important;
-      }
-
-      .slider-container,
-      #projects .slider-container.has-featured {
-        width: calc(100vw - 36px);
-        padding: 0 !important;
-        overflow: hidden;
-        -webkit-mask-image: none !important;
-        mask-image: none !important;
-      }
-
-      #projects .slider-container.has-featured::before {
-        display: none !important;
-      }
-
-      .project-card,
-      #projects .project-card,
-      .project-card.slider-static {
-        width: calc(100vw - 36px) !important;
-        min-height: auto !important;
-        border-width: 3px !important;
-        border-radius: 14px;
-      }
-
-      .project-card.slider-static {
-        position: relative !important;
-        inset: auto !important;
-        margin-bottom: 18px;
-      }
-
-      .slider-track,
-      .slider-track--with-static {
-        width: max-content;
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-        gap: 18px !important;
-      }
-
-      .card-header {
-        height: 168px;
-      }
-
-      #projects .project-card>.p-6 {
-        padding: 18px !important;
-      }
-
-      #projects .project-card h4 {
-        font-size: 1.08rem;
-        line-height: 1.22;
-      }
-
-      #projects .project-card p {
-        font-size: 0.86rem;
-      }
-
-      .featured-badge {
-        top: -34px !important;
-      }
-
-      .featured-crown {
-        font-size: 3.8rem !important;
-      }
-
-      .featured-pride-label {
-        width: auto !important;
-        max-width: calc(100vw - 88px);
-        margin-top: 4px;
-        font-size: 0.62rem !important;
-        letter-spacing: 0.08em;
-        text-align: center;
-      }
-
-      .slider-block>.min-\[451px\]\:hidden {
-        display: flex !important;
-        margin-top: 20px !important;
-      }
-
-      .slider-prev,
-      .slider-next {
-        width: 48px !important;
-        height: 48px !important;
-        border-color: rgba(10, 10, 10, 0.85);
-      }
-
-      .github-card {
-        margin-top: 48px !important;
-        border-radius: 14px !important;
-        padding: 24px !important;
-      }
-    }
-
-    @media (min-width: 768px) {
-      #projects .slider-container.has-featured {
-        --static-w: 420px;
-      }
-
-      .slider-track--with-static {
-        --static-w: 420px;
-      }
-    }
 
     /* Золотая карточка */
     .project-card--featured {
@@ -893,50 +637,6 @@
       mask-image: linear-gradient(to right, #000 0, #000 calc(100% - 90px), rgba(0, 0, 0, 0.35) calc(100% - 30px), rgba(0, 0, 0, 0) 100%);
     }
 
-    @media (max-width: 640px) {
-      .slider-container {
-        -webkit-mask-image: linear-gradient(to right, #000 0, #000 calc(100% - 32px), rgba(0, 0, 0, 0) 100%);
-        mask-image: linear-gradient(to right, #000 0, #000 calc(100% - 32px), rgba(0, 0, 0, 0) 100%);
-        padding-left: 16px;
-      }
-
-      #projects .slider-block {
-        margin-top: 3.75rem;
-      }
-
-      #projects .slider-block>.flex:first-child {
-        margin-bottom: 2.75rem;
-      }
-
-      #projects .slider-container.has-featured {
-        padding-top: 20px !important;
-        /* Уменьшили с 46px */
-      }
-
-      /* Убираем белый фон-заглушку, который мог создавать визуальную щель */
-      #projects .slider-container.has-featured::before {
-        top: 20px !important;
-      }
-
-      .project-card.slider-static {
-        top: 20px !important;
-        /* Двигаем саму карточку выше внутри контейнера */
-      }
-
-      .featured-crown {
-        font-size: clamp(3.8rem, 15vw, 5rem);
-      }
-
-      .featured-pride-label {
-        width: calc(100% - 36px);
-        font-size: 11px;
-      }
-
-      .featured-badge {
-        top: 0;
-      }
-    }
-
     html,
     body {
       overflow-x: hidden;
@@ -1002,45 +702,9 @@
       animation: wipWalkBob .55s ease-in-out infinite alternate;
     }
 
-    @keyframes wipWalkPos {
-      from {
-        left: 4px;
-      }
-
-      to {
-        left: calc(100% - 44px);
-      }
-
-      /* Чуть увеличили отступ справа, чтобы большая фигурка не вылезала за край */
-    }
-
     /* Исправили лунную походку! 
        В первой половине (когда идет направо) отражаем по горизонтали (-1),
        Во второй половине (идет налево) возвращаем в обычное состояние (1) */
-    @keyframes wipWalkFlip {
-
-      0%,
-      49.9% {
-        transform: scaleX(-1);
-        /* Идет направо -> разворачиваем лицом направо */
-      }
-
-      50%,
-      100% {
-        transform: scaleX(1);
-        /* Возвращается налево -> смотрит влево (свое обычное состояние) */
-      }
-    }
-
-    @keyframes wipWalkBob {
-      from {
-        transform: translateY(0);
-      }
-
-      to {
-        transform: translateY(-6px);
-      }
-    }
 
     /* ===========================================
        WIP TIMELINE — вертикальный alternating (≤760px)
@@ -1075,9 +739,10 @@
       z-index: 2;
     }
 
-    /* Ряд таймлайна */
+    /* Ряд таймлайна — z-index:3 создаёт stacking context выше линии (vline z:1, vtrack z:2) */
     .wip-vrow {
       position: relative;
+      z-index: 3;
       display: flex;
       align-items: center;
       min-height: 110px;
@@ -1201,34 +866,6 @@
     }
 
     /* Очень узкие экраны — стек в одну колонку, линия слева */
-    @media (max-width: 480px) {
-
-      .wip-vline,
-      .wip-vtrack {
-        left: 18px;
-        transform: none;
-      }
-
-      .wip-vrow {
-        padding-left: 56px;
-        justify-content: flex-start !important;
-        min-height: 100px;
-      }
-
-      .wip-vrow--left .wip-vcard,
-      .wip-vrow--right .wip-vcard {
-        width: 100%;
-        order: 2;
-      }
-
-      .wip-vnode {
-        left: 18px;
-        top: 22px;
-        margin-left: -18px;
-        margin-top: 0;
-        order: 1;
-      }
-    }
 
     /* ===========================================
        WHY ME — creative diagram
@@ -1485,41 +1122,113 @@
       stroke-dashoffset: 0 !important;
     }
 
-    @media (max-width: 720px) {
-      .why-anim .why-arrows {
-        display: none;
+    /* ===========================================
+       GLOBAL RESPONSIVE FIXES
+       =========================================== */
+    img,
+    video,
+    svg {
+      max-width: 100%;
+      height: auto;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    p,
+    span {
+      overflow-wrap: normal;
+      word-break: normal;
+    }
+
+    a {
+      overflow-wrap: anywhere;
+    }
+
+    code,
+    pre {
+      overflow-wrap: normal;
+      word-break: normal;
+    }
+
+    /* Изменяем траекторию кривой для экранов 1299px и меньше */
+
+    /* Настройки для экранов 1099px и меньше */
+
+    /* «Почему я?» при ≤800px: заголовок сверху → стрелки вниз → причины в 2 колонки */
+
+    /* Очень узкие экраны — складываем причины в одну колонку */
+
+    /* Tech badges */
+    .badge {
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 0.3rem 0.7rem;
+      border-radius: 9999px;
+      letter-spacing: 0.02em;
+    }
+
+    /* Soft skill icon circles */
+    .icon-circle {
+      width: 64px;
+      height: 64px;
+      border-radius: 9999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--pink);
+      font-size: 1.5rem;
+      color: var(--black);
+    }
+
+    /* Smooth underline links */
+    .nav-link {
+      position: relative;
+    }
+
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--pink-dark);
+      transition: width 0.25s ease;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    /* Selection */
+    ::selection {
+      background: var(--pink-dark);
+      color: #000;
+    }
+
+    /* Змейка для мобилок (до 900px) */
+    .focus-curve--vertical {
+      display: none;
+      /* Скрыта по умолчанию */
+      width: 100%;
+      height: 200px;
+      margin: 2rem 0;
+    }
+
+
+    /* ==============================================
+   KEYFRAMES
+   ============================================== */
+
+    @keyframes marquee {
+      from {
+        transform: translateX(0);
       }
 
-      .why-anim.is-on .why-item--tc {
-        transition-delay: .3s;
-      }
-
-      .why-anim.is-on .why-item--tr {
-        transition-delay: .4s;
-      }
-
-      .why-anim.is-on .why-item--mr {
-        transition-delay: .5s;
-      }
-
-      .why-anim.is-on .why-item--br {
-        transition-delay: .6s;
-      }
-
-      .why-anim.is-on .why-item--bc {
-        transition-delay: .7s;
-      }
-
-      .why-anim.is-on .why-item--bl {
-        transition-delay: .8s;
-      }
-
-      .why-anim.is-on .why-item--ml {
-        transition-delay: .9s;
-      }
-
-      .why-anim.is-on .why-item--tl {
-        transition-delay: 1.0s;
+      to {
+        transform: translateX(-100%);
       }
     }
 
@@ -1529,7 +1238,24 @@
       }
 
       to {
-        left: calc(100% - 32px);
+        left: calc(100% - 44px);
+      }
+
+      /* Чуть увеличили отступ справа, чтобы большая фигурка не вылезала за край */
+    }
+
+    @keyframes wipWalkFlip {
+
+      0%,
+      49.9% {
+        transform: scaleX(-1);
+        /* Идет направо -> разворачиваем лицом направо */
+      }
+
+      50%,
+      100% {
+        transform: scaleX(1);
+        /* Возвращается налево -> смотрит влево (свое обычное состояние) */
       }
     }
 
@@ -1539,7 +1265,7 @@
       }
 
       to {
-        transform: translateY(-3px);
+        transform: translateY(-6px);
       }
     }
 
@@ -1591,44 +1317,17 @@
       }
     }
 
-    /* ===========================================
-       GLOBAL RESPONSIVE FIXES
-       =========================================== */
-    img,
-    video,
-    svg {
-      max-width: 100%;
-      height: auto;
-    }
 
-    h1,
-    h2,
-    h3,
-    h4,
-    p,
-    span {
-      overflow-wrap: normal;
-      word-break: normal;
-    }
+    /* ==============================================
+   MEDIA QUERIES — max-width (large → small)
+   ============================================== */
 
-    a {
-      overflow-wrap: anywhere;
-    }
-
-    code,
-    pre {
-      overflow-wrap: normal;
-      word-break: normal;
-    }
-
-    /* Изменяем траекторию кривой для экранов 1299px и меньше */
     @media (max-width: 1299px) {
       .focus-curve--horizontal path {
         d: path('M 43 20 C 80 20, 20 50, 55 75');
       }
     }
 
-    /* Настройки для экранов 1099px и меньше */
     @media (max-width: 1099px) {
 
       #line-container {
@@ -1687,92 +1386,152 @@
       }
     }
 
-    @media (max-width: 768px) {
+    /* ============================================================
+       FOCUS ARROW BARBS (усики) — анимируются по-очереди через CSS
+       ============================================================ */
+    .focus-story-barb-1,
+    .focus-story-barb-2 {
+      stroke-dasharray: 20;
+      stroke-dashoffset: 20;
+    }
 
-      section[class*="py-20"],
-      section[class*="py-32"] {
-        padding-top: 60px;
-        padding-bottom: 60px;
+    /* Первый усик: рисуется сразу после добавления класса */
+    .focus-story-connector.barbs-ready .focus-story-barb-1 {
+      stroke-dashoffset: 0;
+      transition: stroke-dashoffset 0.22s ease-out;
+    }
+
+    /* Второй усик: рисуется с задержкой после первого */
+    .focus-story-connector.barbs-ready .focus-story-barb-2 {
+      stroke-dashoffset: 0;
+      transition: stroke-dashoffset 0.22s ease-out 0.26s;
+    }
+
+    @media (max-width: 900px) {
+      .focus-story {
+        gap: 0;
       }
 
-      .hero-title {
-        font-size: clamp(2.25rem, 9vw, 3.5rem);
-        line-height: 1;
+      .focus-story-connector {
+        position: relative;
+        min-height: clamp(360px, 62vw, 560px);
+        margin: clamp(2.5rem, 8vw, 5rem) 0 clamp(1.75rem, 6vw, 4rem);
+        pointer-events: none;
       }
 
-      .project-card {
-        width: 82vw !important;
+      .focus-story-curve {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        overflow: visible;
       }
 
-      .slider-container {
-        padding-left: 16px;
+      .focus-story-curve path {
+        stroke: var(--black);
+        stroke-width: 2.4;
+        fill: none;
+        stroke-linecap: round;
+        stroke-linejoin: round;
       }
 
-      .slider-track {
-        padding-right: 16px;
+      .focus-story-line {
+        vector-effect: non-scaling-stroke;
       }
 
-      #slider-prev,
-      #slider-next {
-        width: 44px !important;
-        height: 44px !important;
+      .focus-curve--vertical {
+        display: block !important;
+        order: 2;
+        /* Ставим её между блоком Frontend и Telegram */
       }
 
-      .stamp-wrapper {
-        max-width: 88vw;
-      }
-
-      .hero-photo-wrap {
-        max-width: 100% !important;
-      }
-
-      footer .magnetic-link {
-        padding-top: 14px;
-        padding-bottom: 14px;
-      }
-
-      footer .magnetic-link span.text-lg {
-        font-size: 1rem;
-      }
-
-      .marquee-content span {
-        padding-left: 8px;
-        padding-right: 8px;
-      }
-
-      header nav {
-        padding-top: 12px;
-        padding-bottom: 12px;
-      }
-
-      /* Адаптивность диаграммы */
-      .why-arrows {
-        display: none;
-      }
-
-      .why-grid {
-        grid-template-columns: 1fr;
-        gap: 28px;
-      }
-
-      .why-item,
-      .why-center {
-        grid-column: 1 !important;
-        grid-row: auto !important;
-        max-width: 100%;
-      }
-
-      .why-center {
-        order: -1;
-        padding: 0 0 12px;
-      }
-
-      .why-title {
-        font-size: clamp(2.25rem, 11vw, 3.25rem);
+      .focus-curve--vertical path {
+        vector-effect: non-scaling-stroke;
+        stroke: var(--black);
+        stroke-width: 3;
+        fill: none;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        transition: stroke-dashoffset 0.8s ease-out;
       }
     }
 
-    /* «Почему я?» при ≤800px: заголовок сверху → стрелки вниз → причины в 2 колонки */
+    /* ≤860px: слайдер проектов складывается в вертикальную колонку.
+       JS-анимация трансформаций отключается через data-stack-below="860".
+       overflow: visible !important — с !important перебивает то же правило из 767px-блока,
+       которое имеет ту же специфичность но стоит позже в файле. */
+    @media (max-width: 860px) {
+
+      /* Контейнер: featured-карточка сверху, мобильный слайдер снизу */
+      #projects .slider-container.has-featured {
+        display: flex !important;
+        flex-direction: column !important;
+        overflow: visible !important;
+        width: 100% !important;
+        padding: 0 !important;
+        gap: 0 !important;
+        -webkit-mask-image: none !important;
+        mask-image: none !important;
+      }
+
+      /* Featured-карточка: фиксированная ширина, по центру */
+      #projects .project-card.slider-static {
+        position: relative !important;
+        inset: auto !important;
+        width: min(85vw, 400px) !important;
+        margin-top: 120px !important;
+        margin-bottom: 0 !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+
+      /* Скрываем белый блок-заглушку — он нужен только на десктопе */
+      #projects .slider-container.has-featured::before {
+        display: none !important;
+      }
+
+      /* Корона — строго над featured-карточкой */
+      #projects .featured-badge {
+        top: -108px !important;
+        left: 50% !important;
+        right: auto !important;
+        transform: translateX(-50%) !important;
+        width: 100%;
+        pointer-events: none;
+      }
+
+      /* Обёртка мобильного слайдера: скрывает горизонтальный overflow */
+      #projects .mobile-slider-wrap {
+        width: 100%;
+        overflow: hidden;
+        margin-top: 24px;
+        -webkit-mask-image: linear-gradient(to right, #000 0, #000 calc(100% - 60px), rgba(0, 0, 0, 0) 100%);
+        mask-image: linear-gradient(to right, #000 0, #000 calc(100% - 60px), rgba(0, 0, 0, 0) 100%);
+      }
+
+      /* Трек: горизонтальный — как слайдер учёбы */
+      #projects .slider-track--with-static {
+        display: flex !important;
+        flex-direction: row !important;
+        width: max-content !important;
+        padding-left: 16px !important;
+        padding-right: 0 !important;
+        gap: 16px !important;
+        transform: none;
+      }
+
+      /* Карточки в мобильном слайдере: ограничиваем по максимуму */
+      #projects .slider-track--with-static .project-card {
+        width: min(85vw, 360px) !important;
+        transform: none !important;
+      }
+
+      /* Убираем фиксированную min-height (была 520px) — на мобиле карточка должна быть по контенту */
+      #projects .project-card {
+        min-height: auto !important;
+      }
+    }
+
     @media (max-width: 800px) {
 
       /* Скрываем оригинальные стрелки (радиальные) — заменяем их вертикальными */
@@ -1899,7 +1658,436 @@
       }
     }
 
-    /* Очень узкие экраны — складываем причины в одну колонку */
+    @media (max-width: 768px) {
+
+      section[class*="py-20"],
+      section[class*="py-32"] {
+        padding-top: 60px;
+        padding-bottom: 60px;
+      }
+
+      .hero-title {
+        font-size: clamp(2.25rem, 9vw, 3.5rem);
+        line-height: 1;
+      }
+
+      .project-card {
+        width: 82vw !important;
+      }
+
+      .slider-container {
+        padding-left: 16px;
+      }
+
+      .slider-track {
+        padding-right: 16px;
+      }
+
+      #slider-prev,
+      #slider-next {
+        width: 44px !important;
+        height: 44px !important;
+      }
+
+      .stamp-wrapper {
+        max-width: 88vw;
+      }
+
+      .hero-photo-wrap {
+        max-width: 100% !important;
+      }
+
+      footer .magnetic-link {
+        padding-top: 14px;
+        padding-bottom: 14px;
+      }
+
+      footer .magnetic-link span.text-lg {
+        font-size: 1rem;
+      }
+
+      .marquee-content span {
+        padding-left: 8px;
+        padding-right: 8px;
+      }
+
+      header nav {
+        padding-top: 12px;
+        padding-bottom: 12px;
+      }
+
+      /* Адаптивность диаграммы */
+      .why-arrows {
+        display: none;
+      }
+
+      .why-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .why-item,
+      .why-center {
+        grid-column: 1 !important;
+        grid-row: auto !important;
+        max-width: 100%;
+      }
+
+      .why-center {
+        order: -1;
+        padding: 0 0 12px;
+      }
+
+      .why-title {
+        font-size: clamp(2.25rem, 11vw, 3.25rem);
+      }
+    }
+
+    @media (max-width: 767px) {
+      body {
+        background: #fff;
+      }
+
+      section {
+        padding-left: 18px !important;
+        padding-right: 18px !important;
+      }
+
+      body>section:first-of-type {
+        padding-top: 96px !important;
+        padding-bottom: 46px !important;
+      }
+
+      body>section:first-of-type .max-w-7xl {
+        display: flex !important;
+        flex-direction: column;
+        width: calc(100vw - 36px) !important;
+        max-width: calc(100vw - 36px) !important;
+        gap: 28px !important;
+        overflow: hidden;
+      }
+
+      body>section:first-of-type .reveal {
+        order: 1 !important;
+        min-width: 0;
+        width: 100%;
+        max-width: 100%;
+      }
+
+      body>section:first-of-type .reveal-right {
+        order: 2 !important;
+        min-width: 0;
+        width: 100%;
+        justify-content: flex-start !important;
+      }
+
+      .hero-title,
+      .section-title,
+      .focus-title {
+        letter-spacing: 0;
+      }
+
+      .hero-title {
+        font-size: clamp(2.35rem, 10.8vw, 3rem) !important;
+        margin-bottom: 18px !important;
+        overflow-wrap: anywhere;
+      }
+
+      .hero-title span {
+        font-size: 2.35rem;
+      }
+
+      body>section:first-of-type p {
+        max-width: 100% !important;
+        overflow-wrap: anywhere;
+      }
+
+      body>section:first-of-type .flex.flex-wrap {
+        display: grid !important;
+        grid-template-columns: 1fr;
+        gap: 12px !important;
+      }
+
+      body>section:first-of-type .flex.flex-wrap a {
+        width: 100%;
+        justify-content: center;
+        padding-left: 18px !important;
+        padding-right: 18px !important;
+        white-space: nowrap;
+      }
+
+      .hero-photo-wrap {
+        width: 340px !important;
+        max-width: 100% !important;
+        border-width: 4px !important;
+      }
+
+      .hero-photo-wrap .absolute.top-4 {
+        left: 12px !important;
+        top: 12px !important;
+        padding: 8px 12px !important;
+        font-size: 0.75rem !important;
+      }
+
+      #line-container {
+        display: none !important;
+      }
+
+      #focus .md\:hidden {
+        display: grid !important;
+      }
+
+      #focus .md\:hidden>div {
+        padding: 22px 0;
+        border-top: 1px solid rgba(10, 10, 10, 0.08);
+      }
+
+      #focus .md\:hidden h3 {
+        font-size: clamp(2.8rem, 14vw, 4.5rem) !important;
+        line-height: 0.92;
+      }
+
+      #focus .md\:hidden p.text-base {
+        font-size: 0.95rem;
+        line-height: 1.65;
+      }
+
+      .focus-photo {
+        border-radius: 10px;
+        box-shadow: 0 14px 36px rgba(0, 0, 0, 0.13);
+      }
+
+      .focus-stack {
+        gap: 0.35rem;
+      }
+
+      .focus-stack li {
+        font-size: 0.68rem;
+        padding: 0.25rem 0.56rem;
+      }
+
+      #projects {
+        padding-top: 64px !important;
+      }
+
+      #projects .section-title {
+        font-size: clamp(2.25rem, 15vw, 4rem);
+      }
+
+      #projects .mt-6.inline-flex {
+        display: none !important;
+      }
+
+      #projects .slider-block {
+        margin-top: 2.25rem !important;
+      }
+
+      #projects .slider-block>.flex:first-child {
+        display: none !important;
+      }
+
+      /* Горизонтальный скролл прячем, вертикальный — открываем,
+         чтобы корона бейджа не обрезалась */
+      .slider-container,
+      #projects .slider-container.has-featured {
+        width: calc(100vw - 36px);
+        padding: 0 !important;
+        overflow-x: hidden;
+        overflow-y: visible;
+        -webkit-mask-image: none !important;
+        mask-image: none !important;
+      }
+
+      #projects .slider-container.has-featured::before {
+        display: none !important;
+      }
+
+      .project-card,
+      #projects .project-card,
+      .project-card.slider-static {
+        width: calc(100vw - 36px) !important;
+        min-height: auto !important;
+        border-width: 3px !important;
+        border-radius: 14px;
+      }
+
+      .project-card.slider-static {
+        position: relative !important;
+        inset: auto !important;
+        /* отступ сверху: место для короны и подписи */
+        margin-top: 110px;
+        margin-bottom: 18px;
+      }
+
+      /* Бейдж — абсолютно над карточкой, но внутри видимой области */
+      .featured-badge {
+        top: -108px !important;
+        left: 50% !important;
+        right: auto !important;
+        transform: translateX(-50%) !important;
+        width: 100%;
+        pointer-events: none;
+      }
+
+      .featured-crown {
+        font-size: clamp(3.5rem, 13vw, 5rem) !important;
+        line-height: 1;
+      }
+
+      .featured-pride-label {
+        width: auto !important;
+        max-width: calc(100vw - 60px);
+        margin-top: 6px;
+        font-size: 0.75rem !important;
+        letter-spacing: 0.08em;
+        text-align: center;
+      }
+
+      .slider-track,
+      .slider-track--with-static {
+        width: max-content;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        gap: 18px !important;
+      }
+
+      .card-header {
+        height: 168px;
+      }
+
+      #projects .project-card>.p-6 {
+        padding: 18px !important;
+      }
+
+      #projects .project-card h4 {
+        font-size: 1.08rem;
+        line-height: 1.22;
+      }
+
+      #projects .project-card p {
+        font-size: 0.86rem;
+      }
+
+      .slider-prev,
+      .slider-next {
+        width: 48px !important;
+        height: 48px !important;
+        border-color: rgba(10, 10, 10, 0.85);
+      }
+
+      .github-card {
+        margin-top: 48px !important;
+        border-radius: 14px !important;
+        padding: 24px !important;
+      }
+
+      /* Переопределяем: has-featured — колонка с видимым overflow (корона не обрежется) */
+      #projects .slider-container.has-featured {
+        overflow: visible !important;
+        width: calc(100vw - 36px) !important;
+      }
+
+      /* Обёртка мобильного слайдера — обрезает горизонтально */
+      #projects .mobile-slider-wrap {
+        width: 100%;
+        overflow: hidden;
+      }
+
+      /* Featured card — перебиваем calc(100vw - 36px) из общего правила выше */
+      #projects .project-card.slider-static {
+        width: min(85vw, 400px) !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+
+      /* Карточки слайдера: фиксированная нормальная ширина */
+      #projects .slider-track--with-static .project-card {
+        width: min(85vw, 360px) !important;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .why-anim .why-arrows {
+        display: none;
+      }
+
+      .why-anim.is-on .why-item--tc {
+        transition-delay: .3s;
+      }
+
+      .why-anim.is-on .why-item--tr {
+        transition-delay: .4s;
+      }
+
+      .why-anim.is-on .why-item--mr {
+        transition-delay: .5s;
+      }
+
+      .why-anim.is-on .why-item--br {
+        transition-delay: .6s;
+      }
+
+      .why-anim.is-on .why-item--bc {
+        transition-delay: .7s;
+      }
+
+      .why-anim.is-on .why-item--bl {
+        transition-delay: .8s;
+      }
+
+      .why-anim.is-on .why-item--ml {
+        transition-delay: .9s;
+      }
+
+      .why-anim.is-on .why-item--tl {
+        transition-delay: 1.0s;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .slider-container {
+        -webkit-mask-image: linear-gradient(to right, #000 0, #000 calc(100% - 32px), rgba(0, 0, 0, 0) 100%);
+        mask-image: linear-gradient(to right, #000 0, #000 calc(100% - 32px), rgba(0, 0, 0, 0) 100%);
+        padding-left: 16px;
+      }
+
+      #projects .slider-block {
+        margin-top: 3.75rem;
+      }
+
+      #projects .slider-block>.flex:first-child {
+        margin-bottom: 2.75rem;
+      }
+
+      #projects .slider-container.has-featured {
+        padding-top: 20px !important;
+        /* Уменьшили с 46px */
+      }
+
+      /* Убираем белый фон-заглушку, который мог создавать визуальную щель */
+      #projects .slider-container.has-featured::before {
+        top: 20px !important;
+      }
+
+      .project-card.slider-static {
+        top: 20px !important;
+        /* Двигаем саму карточку выше внутри контейнера */
+      }
+
+      .featured-crown {
+        font-size: clamp(3.8rem, 15vw, 5rem);
+      }
+
+      .featured-pride-label {
+        width: calc(100% - 36px);
+        font-size: 11px;
+      }
+
+      .featured-badge {
+        top: 0;
+      }
+    }
+
     @media (max-width: 500px) {
       .why-grid {
         grid-template-columns: 1fr !important;
@@ -1947,6 +2135,35 @@
 
       .why-anim .why-arrows-vertical {
         max-width: 320px;
+      }
+    }
+
+    @media (max-width: 480px) {
+
+      .wip-vline,
+      .wip-vtrack {
+        left: 18px;
+        transform: none;
+      }
+
+      .wip-vrow {
+        padding-left: 56px;
+        justify-content: flex-start !important;
+        min-height: 100px;
+      }
+
+      .wip-vrow--left .wip-vcard,
+      .wip-vrow--right .wip-vcard {
+        width: 100%;
+        order: 2;
+      }
+
+      .wip-vnode {
+        left: 18px;
+        top: 22px;
+        margin-left: -18px;
+        margin-top: 0;
+        order: 1;
       }
     }
 
@@ -2023,109 +2240,28 @@
       }
     }
 
-    /* Tech badges */
-    .badge {
-      font-size: 0.72rem;
-      font-weight: 600;
-      padding: 0.3rem 0.7rem;
-      border-radius: 9999px;
-      letter-spacing: 0.02em;
-    }
 
-    /* Soft skill icon circles */
-    .icon-circle {
-      width: 64px;
-      height: 64px;
-      border-radius: 9999px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: var(--pink);
-      font-size: 1.5rem;
-      color: var(--black);
-    }
+    /* ==============================================
+   MEDIA QUERIES — min-width (exceptions)
+   ============================================== */
 
-    /* Smooth underline links */
-    .nav-link {
-      position: relative;
-    }
-
-    .nav-link::after {
-      content: "";
-      position: absolute;
-      bottom: -4px;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background: var(--pink-dark);
-      transition: width 0.25s ease;
-    }
-
-    .nav-link:hover::after {
-      width: 100%;
-    }
-
-    /* Selection */
-    ::selection {
-      background: var(--pink-dark);
-      color: #000;
-    }
-
-    /* Змейка для мобилок (до 900px) */
-    .focus-curve--vertical {
-      display: none;
-      /* Скрыта по умолчанию */
-      width: 100%;
-      height: 200px;
-      margin: 2rem 0;
-    }
-
-    @media (max-width: 900px) {
-      .focus-story {
-        gap: 0;
+    @media (min-width: 640px) {
+      #projects .slider-container.has-featured {
+        --static-w: 360px;
       }
 
-      .focus-story-connector {
-        position: relative;
-        min-height: clamp(360px, 62vw, 560px);
-        margin: clamp(2.5rem, 8vw, 5rem) 0 clamp(1.75rem, 6vw, 4rem);
-        pointer-events: none;
+      .slider-track--with-static {
+        --static-w: 360px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      #projects .slider-container.has-featured {
+        --static-w: 420px;
       }
 
-      .focus-story-curve {
-        position: absolute;
-        inset: 0;
-        width: 100%;
-        height: 100%;
-        overflow: visible;
-      }
-
-      .focus-story-curve path {
-        stroke: var(--black);
-        stroke-width: 2.4;
-        fill: none;
-        stroke-linecap: round;
-        stroke-linejoin: round;
-      }
-
-      .focus-story-line {
-        vector-effect: non-scaling-stroke;
-      }
-
-      .focus-curve--vertical {
-        display: block !important;
-        order: 2;
-        /* Ставим её между блоком Frontend и Telegram */
-      }
-
-      .focus-curve--vertical path {
-        vector-effect: non-scaling-stroke;
-        stroke: var(--black);
-        stroke-width: 3;
-        fill: none;
-        stroke-linecap: round;
-        stroke-linejoin: round;
-        transition: stroke-dashoffset 0.8s ease-out;
+      .slider-track--with-static {
+        --static-w: 420px;
       }
     }
   </style>
@@ -2639,13 +2775,13 @@
         <div class="focus-blob"></div>
 
         <svg class="focus-curve" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
-          <path d="M 39 17 C 80 20, 20 50, 62 75" />
+          <path d="M 45 17 C 70 20, 30 50, 50 75" />
         </svg>
 
-        <svg class="focus-curve--vertical" viewBox="0 0 100 300" preserveAspectRatio="none" aria-hidden="true">
-          <path class="snake-path" 
-        d="M 20 10 C 90 10, 90 30, 50 30 C 10 30, 10 50, 50 50 C 90 50, 90 70, 50 70 C 10 70, 10 90, 50 90 L 40 85 M 50 90 L 60 85" 
-        fill="none" stroke="var(--black)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+        <svg class="focus-curve--vertical" viewBox="0 0 100 200" preserveAspectRatio="none" aria-hidden="true">
+          <path class="snake-path"
+            d="M 20 10 C 90 10, 90 30, 50 30 C 10 30, 10 50, 50 50 C 90 50, 90 70, 50 70 C 10 70, 10 90, 50 90 L 40 85 L 50 90 L 60 85"
+            fill="none" stroke="var(--black)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
 
         <div class="absolute reveal-left z-10" style="left: 2%; top: 3%; max-width: 42%;">
@@ -2747,6 +2883,8 @@
                      C 58 418, 27 410, 20 444
                      C 15 474, 35 492, 54 502" />
             <path class="focus-story-line" d="" />
+            <!-- <path class="focus-story-barb-1" d="M 54 502 L 40 491" stroke="var(--black)" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+            <path class="focus-story-barb-2" d="M 54 502 L 68 491" stroke="var(--black)" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round" /> -->
           </svg>
         </div>
 
@@ -2812,7 +2950,8 @@
       <div class="slider-block" data-autoscroll="true">
 
         <div class="flex flex-col md:flex-row md:items-end justify-end gap-6 mb-6">
-          <div class="hidden min-[451px]:flex gap-3 pb-2">
+          <!-- Стрелки сверху: только на экранах >= 900px -->
+          <div class="hidden min-[900px]:flex gap-3 pb-2">
             <button
               class="slider-prev w-12 h-12 rounded-full border border-black flex items-center justify-center hover:bg-black hover:text-white transition">
               <i class="fas fa-arrow-left"></i>
@@ -2828,7 +2967,7 @@
 
           <article
             class="project-card project-card--featured slider-static shrink-0 w-[85vw] sm:w-[360px] md:w-[420px]">
-            <a href="ССЫЛКА_НА_GITHUB" target="_blank"
+            <a href="https://github.com/sashaselivanovaa/Jarvis" target="_blank"
               class="absolute inset-0 bg-[var(--pink)]/90 backdrop-blur-[2px] z-20 opacity-0 hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center text-black cursor-pointer rounded-xl">
               <span class="font-black text-2xl mb-3">Посмотреть код</span>
               <i class="fab fa-github text-4xl"></i>
@@ -2851,80 +2990,81 @@
             </div>
           </article>
 
-          <div class="slider-track slider-track--with-static flex gap-6 w-max">
+          <div class="mobile-slider-wrap">
+            <div class="slider-track slider-track--with-static flex gap-6 w-max">
 
-            <article
-              class="project-card group relative shrink-0 w-[85vw] sm:w-[360px] md:w-[420px] bg-white border border-black/5">
-              <a href="ССЫЛКА_НА_ЭТОТ_GITHUB" target="_blank"
-                class="absolute inset-0 bg-[var(--pink)]/90 backdrop-blur-[2px] z-20 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center text-black cursor-pointer">
-                <span class="font-black text-2xl mb-3">Посмотреть код</span>
-                <i class="fab fa-github text-4xl"></i>
-              </a>
-              <div class="card-header"><img src="https://placehold.co/800x450/000/ffd1dc?text=Portfolio+Site"
-                  alt="Сайт визитка" /></div>
-              <div class="p-6">
-                <span class="text-xs uppercase tracking-widest opacity-60">HTML · Tailwind · JS · SVG</span>
-                <h4 class="text-xl font-bold mt-2 mb-2">Сайт-резюме / Визитка</h4>
-                <p class="text-sm opacity-75 leading-relaxed">Тот самый проект, который вы сейчас видите. Спроектировала
-                  и написала с нуля: от кастомных слайдеров до живой анимации SVG-линий.</p>
-              </div>
-            </article>
+              <article
+                class="project-card group relative shrink-0 w-[85vw] sm:w-[360px] md:w-[420px] bg-white border border-black/5">
+                <a href="https://github.com/sashaselivanovaa/sandra.dev-cv" target="_blank"
+                  class="absolute inset-0 bg-[var(--pink)]/90 backdrop-blur-[2px] z-20 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center text-black cursor-pointer">
+                  <span class="font-black text-2xl mb-3">Посмотреть код</span>
+                  <i class="fab fa-github text-4xl"></i>
+                </a>
+                <div class="card-header"><img src="images/my-website.png"
+                    alt="Сайт визитка" /></div>
+                <div class="p-6">
+                  <span class="text-xs uppercase tracking-widest opacity-60">HTML · Tailwind · JS · SVG</span>
+                  <h4 class="text-xl font-bold mt-2 mb-2">Сайт-резюме / Визитка</h4>
+                  <p class="text-sm opacity-75 leading-relaxed">Тот самый проект, который вы сейчас видите.
+                    Мой личный портфолио-сайт. Реализовала все с нуля, начиная с дизайна, заканчивая адаптивной версткой на Tailwind CSS, плавной микро-анимацией SVG-графики и кастомной логики скролла. Основной фокус — performance, доступность и интерактивность элементов.</p>
+                </div>
+              </article>
 
-            <article
-              class="project-card group relative shrink-0 w-[85vw] sm:w-[360px] md:w-[420px] bg-white border border-black/5">
-              <a href="ССЫЛКА_НА_GITHUB" target="_blank"
-                class="absolute inset-0 bg-[var(--pink)]/90 backdrop-blur-[2px] z-20 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center text-black cursor-pointer">
-                <span class="font-black text-2xl mb-3">Посмотреть код</span>
-                <i class="fab fa-github text-4xl"></i>
-              </a>
-              <div class="card-header"><img src="https://placehold.co/800x450/FFB6C1/0A0A0A?text=Web+Quest"
-                  alt="Web Quest" /></div>
-              <div class="p-6">
-                <span class="text-xs uppercase tracking-widest opacity-60">HTML / CSS · JavaScript · Python</span>
-                <h4 class="text-xl font-bold mt-2 mb-2">Web-разработка & Квесты</h4>
-                <p class="text-sm opacity-75 leading-relaxed">Интерактивный сайт-квест, работающий в связке с Telegram.
-                  Игроки проходят задания, а бот фиксирует прогресс.</p>
-              </div>
-            </article>
+              <article
+                class="project-card group relative shrink-0 w-[85vw] sm:w-[360px] md:w-[420px] bg-white border border-black/5">
+                <a href="https://github.com/sashaselivanovaa/love-quest" target="_blank"
+                  class="absolute inset-0 bg-[var(--pink)]/90 backdrop-blur-[2px] z-20 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center text-black cursor-pointer">
+                  <span class="font-black text-2xl mb-3">Посмотреть код</span>
+                  <i class="fab fa-github text-4xl"></i>
+                </a>
+                <div class="card-header"><img src="images/love-quest.png"
+                    alt="Web Quest" /></div>
+                <div class="p-6">
+                  <span class="text-xs uppercase tracking-widest opacity-60">HTML / CSS · JavaScript · Python</span>
+                  <h4 class="text-xl font-bold mt-2 mb-2">Сайт-квест-подарок на 14 февраля</h4>
+                  <p class="text-sm opacity-75 leading-relaxed">Интерактивный сайт-квест, работающий в связке с
+                    Telegram. Система принимает ответы, проверяет их через валидатор и открывает доступ к новым уровням сайта. Реализована синхронизация состояний пользователя в реальном времени.</p>
+                </div>
+              </article>
 
-            <article
-              class="project-card group relative shrink-0 w-[85vw] sm:w-[360px] md:w-[420px] bg-white border border-black/5">
-              <a href="ССЫЛКА_НА_GITHUB" target="_blank"
-                class="absolute inset-0 bg-[var(--pink)]/90 backdrop-blur-[2px] z-20 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center text-black cursor-pointer">
-                <span class="font-black text-2xl mb-3">Посмотреть код</span>
-                <i class="fab fa-github text-4xl"></i>
-              </a>
-              <div class="card-header"><img src="https://placehold.co/800x450/E0F0FF/0A0A0A?text=Water+Delivery+Bot"
-                  alt="Water Delivery" /></div>
-              <div class="p-6">
-                <span class="text-xs uppercase tracking-widest opacity-60">Python · Telegram API · REST</span>
-                <h4 class="text-xl font-bold mt-2 mb-2">Бот-доставка воды</h4>
-                <p class="text-sm opacity-75 leading-relaxed">Максимально удобный бот для заказа в один клик. Собрала
-                  каталог, корзину и фичу «повторить прошлый заказ».</p>
-              </div>
-            </article>
+              <article
+                class="project-card group relative shrink-0 w-[85vw] sm:w-[360px] md:w-[420px] bg-white border border-black/5">
+                <a href="https://github.com/sashaselivanovaa/LesnoyIstochnikBot" target="_blank"
+                  class="absolute inset-0 bg-[var(--pink)]/90 backdrop-blur-[2px] z-20 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center text-black cursor-pointer">
+                  <span class="font-black text-2xl mb-3">Посмотреть код</span>
+                  <i class="fab fa-github text-4xl"></i>
+                </a>
+                <div class="card-header"><img src="images/delivery-bot.png"
+                    alt="Water Delivery" /></div>
+                <div class="p-6">
+                  <span class="text-xs uppercase tracking-widest opacity-60">Python · Telegram API · REST</span>
+                  <h4 class="text-xl font-bold mt-2 mb-2">Бот-доставка воды</h4>
+                  <p class="text-sm opacity-75 leading-relaxed">Максимально удобный бот для заказа в один клик. Включает корзину, учет адресов и историю заказов. Бот автоматически записывает данные в Google Sheets, избавляя менеджера от ручного ввода, и поддерживает функцию быстрого повтора заказа для постоянных клиентов.</p>
+                </div>
+              </article>
 
-            <article
-              class="project-card group relative shrink-0 w-[85vw] sm:w-[360px] md:w-[420px] bg-white border border-black/5">
-              <a href="ССЫЛКА_НА_GITHUB" target="_blank"
-                class="absolute inset-0 bg-[var(--pink)]/90 backdrop-blur-[2px] z-20 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center text-black cursor-pointer">
-                <span class="font-black text-2xl mb-3">Посмотреть код</span>
-                <i class="fab fa-github text-4xl"></i>
-              </a>
-              <div class="card-header"><img src="https://placehold.co/800x450/0A0A0A/FFD1DC?text=ERP+Bot"
-                  alt="ERP Bot" /></div>
-              <div class="p-6">
-                <span class="text-xs uppercase tracking-widest opacity-60">Python · SQL / DB · RBAC</span>
-                <h4 class="text-xl font-bold mt-2 mb-2">ERP-бот для бизнеса</h4>
-                <p class="text-sm opacity-75 leading-relaxed">Внутренняя система управления. Разграничила роли
-                  (менеджер, склад, логист) для контроля заявок и отчетности.</p>
-              </div>
-            </article>
+              <article
+                class="project-card group relative shrink-0 w-[85vw] sm:w-[360px] md:w-[420px] bg-white border border-black/5">
+                <a href="https://github.com/sashaselivanovaa/telegram-finance-bot" target="_blank"
+                  class="absolute inset-0 bg-[var(--pink)]/90 backdrop-blur-[2px] z-20 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center text-black cursor-pointer">
+                  <span class="font-black text-2xl mb-3">Посмотреть код</span>
+                  <i class="fab fa-github text-4xl"></i>
+                </a>
+                <div class="card-header"><img src="images/erp-bot.png"
+                    alt="ERP Bot" /></div>
+                <div class="p-6">
+                  <span class="text-xs uppercase tracking-widest opacity-60">Python · SQL / DB · RBAC</span>
+                  <h4 class="text-xl font-bold mt-2 mb-2">ERP-бот для бизнеса</h4>
+                  <p class="text-sm opacity-75 leading-relaxed">Полноценная внутренняя ERP-система управления в Telegram для сотрудников. Внедрена модель управления доступом (RBAC), позволяющая разным сотрудникам видеть только свои разделы (склад, бухгалтерия, логистика). Реализована генерация аналитических отчетов и система уведомлений для руководителей.</p>
+                </div>
+              </article>
 
-          </div>
+            </div>
+          </div><!-- /.mobile-slider-wrap -->
         </div>
 
-        <div class="flex min-[451px]:hidden justify-center gap-6 mt-8">
+        <!-- Стрелки снизу: только на экранах < 900px -->
+        <div class="flex min-[900px]:hidden justify-center gap-6 mt-8">
           <button
             class="slider-prev w-14 h-14 rounded-full border border-black flex items-center justify-center bg-white active:bg-black active:text-white transition-colors shadow-sm"><i
               class="fas fa-arrow-left"></i></button>
@@ -2934,7 +3074,7 @@
         </div>
       </div>
 
-      <a href="#contact"
+      <a href="https://github.com/sashaselivanovaa" target="_blank"
         class="github-card reveal-up mt-16 md:mt-20 max-w-3xl mx-auto block bg-black text-white rounded-2xl overflow-hidden p-8 md:p-10 hover:bg-gray-900 transition-colors">
         <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
           <div>
@@ -3266,19 +3406,19 @@
           </span>
           <i class="fab fa-telegram-plane"></i>
         </a>
-        <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener"
+        <a href="https://www.linkedin.com/in/oleksandra-selivanova-3071572b3" target="_blank" rel="noopener"
           class="magnetic-link contact-line flex items-center justify-between gap-4 py-4">
           <span>
             <span class="block text-xs uppercase tracking-widest opacity-50">LinkedIn</span>
-            <span class="text-lg md:text-2xl font-bold">Профиль LinkedIn</span>
+            <span class="text-lg md:text-2xl font-bold">Oleksandra Selivanova</span>
           </span>
           <i class="fab fa-linkedin-in"></i>
         </a>
-        <a href="https://github.com/your-username" target="_blank" rel="noopener"
+        <a href="https://github.com/sashaselivanovaa" target="_blank" rel="noopener"
           class="magnetic-link contact-line flex items-center justify-between gap-4 py-4">
           <span>
             <span class="block text-xs uppercase tracking-widest opacity-50">GitHub</span>
-            <span class="text-lg md:text-2xl font-bold">Код и проекты</span>
+            <span class="text-lg md:text-2xl font-bold">sashaselivanovaa</span>
           </span>
           <i class="fab fa-github"></i>
         </a>
@@ -3378,16 +3518,20 @@
 
     // 2. Анимация для Планшетов/Мобилок (Широкая Змейка)
     if (mobContainer && mobCurve && mobDrawCurve) {
-      let len = mobCurve.getTotalLength() || 1;
+      // Длина вычисляется лениво: при первом обращении, а не при загрузке страницы,
+      // когда родительский элемент может быть ещё скрыт (display:none на десктопе).
+      let len = 0;
 
-      const syncMobileCurveLength = () => {
-        len = mobCurve.getTotalLength() || 1;
+      const getLen = () => {
+        if (!len) len = mobCurve.getTotalLength() || 1;
+        return len;
       };
 
       const getMobileCurveD = (progress) => {
         if (progress <= 0) return "";
 
-        const visibleLength = len * progress;
+        const totalLen = getLen();
+        const visibleLength = totalLen * progress;
         const segments = Math.max(2, Math.ceil(180 * progress));
         const points = [];
 
@@ -3397,11 +3541,64 @@
         }
 
         let d = `M ${points.join(" L ")}`;
-        if (progress >= 0.985) {
-          d += " M 54 502 L 39 493 M 54 502 L 49 484";
+
+        // Усики: первый рисуется при 93-97% прогресса, второй при 97-100%.
+        const b1p = Math.max(0, Math.min(1, (progress - 0.93) / 0.04));
+        const b2p = Math.max(0, Math.min(1, (progress - 0.97) / 0.03));
+
+        if (b1p > 0 || b2p > 0) {
+          // ==========================================
+          // НАСТРОЙКА КООРДИНАТ УСИКОВ:
+          // ==========================================
+          const startX = 54;  // X откуда растут усики (совпадает с концом основной линии)
+          const startY = 502; // Y откуда растут усики
+
+          const leftX = 50;   // X куда указывает ЛЕВЫЙ усик
+          const leftY = 485;  // Y куда указывает ЛЕВЫЙ усик
+
+          const rightX = 50;  // X куда указывает ПРАВЫЙ усик
+          const rightY = 519; // Y куда указывает ПРАВЫЙ усик
+          // ==========================================
+
+          if (b1p > 0) {
+            // Отрисовка левого усика
+            d += ` M ${startX} ${startY} L ${(startX + (leftX - startX) * b1p).toFixed(2)} ${(startY + (leftY - startY) * b1p).toFixed(2)}`;
+          }
+          if (b2p > 0) {
+            // Отрисовка правого усика
+            d += ` M ${startX} ${startY} L ${(startX + (rightX - startX) * b2p).toFixed(2)} ${(startY + (rightY - startY) * b2p).toFixed(2)}`;
+          }
         }
 
         return d;
+
+        // // Усики: первый рисуется при 93-97% прогресса, второй при 97-100%.
+        // // Координаты вычисляются через реальный размер SVG-элемента, потому что
+        // // preserveAspectRatio="none" растягивает viewBox непропорционально —
+        // // без компенсации усики выходят слишком длинными по горизонтали.
+        // const b1p = Math.max(0, Math.min(1, (progress - 0.93) / 0.04));
+        // const b2p = Math.max(0, Math.min(1, (progress - 0.97) / 0.03));
+
+        // if (b1p > 0 || b2p > 0) {
+        //   const svgEl = mobCurve.closest('svg');
+        //   const svgRect = svgEl.getBoundingClientRect();
+        //   // Масштаб: сколько единиц viewBox = 1 пиксель экрана
+        //   const sx = svgRect.width  > 0 ? 100 / svgRect.width  : 1;
+        //   const sy = svgRect.height > 0 ? 520 / svgRect.height : 1;
+        //   const barbPx = 16;           // желаемая длина усика в экранных пикселях
+        //   const dx = barbPx * sx * 0.55; // горизонтальный разброс
+        //   const dy = barbPx * sy;         // подъём вверх
+        //   const ex = 54, ey = 502;        // конец основной линии в координатах viewBox
+
+        //   if (b1p > 0) {
+        //     d += ` M ${ex} ${ey} L ${(ex - b1p * dx).toFixed(2)} ${(ey - b1p * dy).toFixed(2)}`;
+        //   }
+        //   if (b2p > 0) {
+        //     d += ` M ${ex} ${ey} L ${(ex + b2p * dx).toFixed(2)} ${(ey - b2p * dy).toFixed(2)}`;
+        //   }
+        // }
+
+        // return d;
       };
 
       let ticking = false;
@@ -3424,11 +3621,10 @@
         }
       };
 
-      syncMobileCurveLength();
       drawMobileFocusCurve();
       window.addEventListener("scroll", requestMobileFocusDraw);
       window.addEventListener("resize", () => {
-        syncMobileCurveLength();
+        len = 0; // сбросить кэш длины при ресайзе
         requestMobileFocusDraw();
       });
     }
@@ -3521,11 +3717,14 @@
       let autoScrollInterval = null;
       let isAnimating = false;
 
-      // Читаем настройку из HTML: должен ли этот слайдер крутиться сам?
       const shouldAutoScroll = block.dataset.autoscroll !== 'false';
+      // Если указан data-stack-below, при ширине ≤ N пикселей слайдер превращается в
+      // вертикальный стек и JS-анимации должны быть полностью заморожены.
+      const stackBreakpoint = block.dataset.stackBelow ? parseInt(block.dataset.stackBelow) : 0;
+      const isStacked = () => stackBreakpoint > 0 && window.innerWidth <= stackBreakpoint;
 
       const moveNext = () => {
-        if (isAnimating) return;
+        if (isAnimating || isStacked()) return;
         isAnimating = true;
 
         const firstCard = track.firstElementChild;
@@ -3544,7 +3743,7 @@
       };
 
       const movePrev = () => {
-        if (isAnimating) return;
+        if (isAnimating || isStacked()) return;
         isAnimating = true;
 
         const lastCard = track.lastElementChild;
@@ -3572,11 +3771,16 @@
       };
 
       const startAutoScroll = () => {
-        // Если автоскролл отключен атрибутом, просто выходим
-        if (!shouldAutoScroll) return;
+        if (!shouldAutoScroll || isStacked()) return;
         stopAutoScroll();
         autoScrollInterval = setInterval(moveNext, 3500);
       };
+
+      // При ресайзе пересматриваем: если вошли в stacked-режим — останавливаем автоскролл
+      window.addEventListener('resize', () => {
+        if (isStacked()) stopAutoScroll();
+        else startAutoScroll();
+      });
 
       nextBtns.forEach(btn => {
         btn.addEventListener('click', () => {
